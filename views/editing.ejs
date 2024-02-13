@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="./assets/css/admin_editing.css" />
+  <link rel="icon" type="image/x-icon" href="/assets/image/logo-main.svg" />
+  <title>Admin</title>
+</head>
+
+<body>
+  <div class="button-wrap-exit">
+    <div class="logo"><img src="./assets/image/logo-footer.svg" alt="logo" /></div>
+    <a href="/" target="_blank">На головну</a>
+  </div>
+
+  <form class="logout-system" action="/deshychi_vyhid" method="post">
+    <div class="button-wrap">
+      <input class="button-wrap__button" type="submit" value="Вихід" />
+    </div>
+  </form>
+  <hr />
+
+  <!-- Contacts -->
+  <h2>Ваші контакти, Ви можете ввести зміни:</h2>
+  <% contacts.forEach(contact=> { %>
+    <form class="login-system" action="/deshychi_admin/edit_contact/<%= contact._id %>" method="post">
+      <input class="validate" type="text" placeholder="Змініть номер телефону" name="phone" id="phone" maxlength="30"
+        value="<%= contact.phone %>" required />
+
+      <input class="validate" type="text" placeholder="Змініть ім'я електронної пошти" name="email" id="email"
+        maxlength="40" value="<%= contact.email %>" required />
+
+      <div class="button-wrap">
+        <input class="button-wrap__button" type="submit" value="Зберегти зміни" />
+      </div>
+    </form>
+    <% }); %>
+      <hr />
+
+      <!-- AboutUs -->
+      <h2>Інформація про пекарню, Ви можете ввести зміни:</h2>
+      <% aboutUs.forEach(about=> { %>
+        <form class="login-system" action="/deshychi_admin/edit_aboutus/<%= about._id %>" method="post">
+          <textarea rows="30" cols="45" name="description" id="description" minlength="1"
+            placeholder="Тут ви можете розказати про себе" required>
+<%= about.description %></textarea>
+
+          <div class="button-wrap">
+            <input class="button-wrap__button" type="submit" value="Зберегти зміни" />
+          </div>
+        </form>
+        <% }); %>
+          <hr />
+
+          <!-- Gallery Add -->
+          <h2 style="font-size: 60px;">ГАЛЕРЕЯ</h2>
+          <h2>Додайте нове фото і опис до події, подій може бути не більше 10</h2>
+          <form action="/deshychi_admin/add" method="POST" enctype="multipart/form-data" id="submit"
+            class="login-system">
+            <textarea rows="5" cols="45" name="description" id="description" minlength="1" maxlength="250"
+              placeholder="Тут ви можете розказати більше про цю подію але максимум в 250 символів" required></textarea>
+            <h5 style="color: #646464">Будь ласка виберіть фото (jpg/png/jpeg)</h5>
+            <input type="file" name="avatar" />
+            <br />
+            <br />
+            <button type="submit" class="button-wrap__button">Створити нове</button>
+          </form>
+          <hr />
+
+          <!-- Gallery Edit -->
+          <h2>Ваші елементи галереї:</h2>
+          <%if (gallery.length> 0) { %> <% gallery.forEach((post)=> { %>
+              <form action="/deshychi_admin/edit" method="POST" enctype="multipart/form-data" id="submit"
+                class="login-system">
+                <div class="galleryElement1__img"><img src="<%= post.img %>" alt="photo" /></div>
+                <h5 style="color: #646464">Тут ваш опис наявної події, яку Ви можете редагувати</h5>
+                <textarea rows="5" cols="45" name="description" id="description" minlength="1" maxlength="250"
+                  placeholder="Тут ви можете розказати більше про цю подію але максимум в 250 символів" required>
+<%=post.description %></textarea>
+                <h5 style="color: #646464">Будь ласка виберіть нове фото (jpg/png/jpeg)</h5>
+                <input type="file" name="avatar" />
+                <br />
+                <br />
+
+                <input type="hidden" name="id" value="<%= post.id %>" />
+                <input type="hidden" name="oldImg" value="<%= post.img %>" />
+                <button type="submit" class="button-wrap__button">Редагувати</button>
+              </form>
+
+              <!-- Gallery Delete -->
+              <div class="center-container">
+                <form action="/deshychi_admin/remove" method="POST">
+                  <input type="hidden" name="id" value="<%= post.id %>" />
+                  <input type="hidden" name="oldImg" value="<%= post.img %>" />
+                  <button type="submit" class="button-wrap__button_delete">Видалити цю подію</button>
+                </form>
+              </div>
+              <!-- <hr /> -->
+
+              <br />
+              <br />
+              <% }) %>
+                <% } else {%>
+                  <div class="col-lg-8 offset-lg-2 text-center">
+                    <div class="section-title">
+                      <h3 style="color: #413a3a"><span class="orange-text">Opps</span>...</h3>
+                      <b style="color: #413a3a"> At this moment, there are not any posts </b>
+                    </div>
+                  </div>
+                  <%}%>
+</body>
+
+</html>

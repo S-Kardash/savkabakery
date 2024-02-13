@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="icon" type="image/x-icon" href="/assets/image/logo-main.svg">
+  <title>Savka Bakery</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <a href="#main"><img src="/assets/image/logo-main.svg" alt="logo"></a>
+    </div>
+    <nav class="block-navigation">
+      <a href="#main" class="navigation">Головна</a>
+      <a href="#master-classes" class="navigation">Майстер-класи</a>
+      <a href="#gallery" class="navigation">Галерея</a>
+      <a href="#directions" class="navigation">Як добратись</a>
+      <a href="#about" class="navigation">Про нас</a>
+    </nav>
+    <div class="burger-wrapper">
+      <div class="logo">
+        <a href="#main"><img src="/assets/image/logo-main.svg" alt="logo"></a>
+      </div>
+      <div class="burger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </div>
+  </header>
+  <div class="container-video" id="main">
+    <div class="video-wrap">
+      <div class="title">
+        <h1>пекарські майстер-класи Світлани Савки</h1>
+      </div>
+      <!-- <video autoplay loop muted src="/assets/image/Video/pexels-roman-odintsov-8190079.webm"></video> -->
+      <video muted loop autoplay>
+        <source src="https://res.cloudinary.com/dl0rlvntp/video/upload/v1698997207/dough_c56jsy.mp4" type="video/mp4">
+    </div>
+  </div>
+  <div class="container-master-classes">
+    <div class="container-master-classes__wrapper">
+      <div class="wrapper-title">
+        <div class="wrapper-title__title" id="master-classes">
+          <div class="animate-on-scroll">
+            <h1>Наші майстер-класи про <br> домашній затишок, про турботу, <br> про любов, про запашну випічку!</h1>
+            <br>
+            <p>
+              Це декілька годин задоволення для дітей, які <br> будуть своїми руками створювати свій смачний <br> обд!
+              <br>
+              І не тільки для дітей, дорослі теж можуть <br> поринути в процес приготування смачної та <br> запашної
+              випічки
+              й
+              згадати
+              часи, <br>
+              коли маленькою дитиною був у захваті від <br> хрусткого та ароматного хліба, який так і хотілось <br>
+              надкусити.
+            </p>
+          </div>
+          <div class="blocksForTitle">
+            <div class="blockForTitle blocksForTitle__el1 "><img class="rolling-element animated"
+                src="/assets/image/circle.svg" alt="circle">
+              <p class="circle_text">Історія створення випічки, яку будемо готувати</p>
+            </div>
+            <div class="blockForTitle blocksForTitle__el2"><img class="rolling-element animated"
+                src="/assets/image/circle.svg" alt="circle">
+              <p class="circle_text">Ігри та розваги на перерві, щоб весело провести час</p>
+            </div>
+            <div class="blockForTitle blocksForTitle__el3"><img class="rolling-element animated"
+                src="/assets/image/circle.svg" alt="circle">
+              <p class="circle_text">Унікальний процес приготування з майстер-класом від пані Світлани</p>
+            </div>
+            <div class="blockForTitle blocksForTitle__el4"><img class="rolling-element animated"
+                src="/assets/image/circle.svg" alt="circle">
+              <p class="circle_text">Смачний обід, приготований самостійно кожним учасником</p>
+            </div>
+            <!-- <div class="blocksForTitle__text1">Історія створення випічки, яку будемо готувати</div>
+                <div class="blocksForTitle__text2">Ігри та розваги на перерві, щоб весело провести час</div>
+                <div class="blocksForTitle__text3">Унікальний процес приготування з майстер-класом від пані Світлани</div>
+                <div class="blocksForTitle__text4">Смачний обід, приготований самостійно кожним учасником</div> -->
+          </div>
+        </div>
+        <div class="wrapper-title__photos">
+          <div class="image-title"><img class="AnimRight"
+              src="https://res.cloudinary.com/ddprhyp1z/image/upload/v1701787730/ev7kx4hsw7d83naf9usd.jpg" alt="image">
+          </div>
+          <div class="image-title"><img class="AnimRight"
+              src="https://res.cloudinary.com/ddprhyp1z/image/upload/v1701787672/bvlrasbcgn6codnnhcnf.jpg" alt="image">
+          </div>
+          <div class="image-correct"><img class="AnimRight" src="/assets/image/master-classes-img3.webp" alt="image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-callToAction">
+    <div class="title-wrap">
+      <div class="animate-on-scroll">
+        <h1>дізнатись більше про майстер-класи</h1>
+      </div>
+      <div class="animate-on-scroll">
+        <a href="tel: +380 96 476 9494">
+          зв’язатись
+          <img src="/assets/image/arrow-right.svg" alt="arrow">
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="container-mail">
+    <div class="container-mail__wrapper">
+      <div class="mail-wrap" id="about">
+        <div class="AnimLeft">
+          <div class="mail-wrap__image"><img src="/assets/image/franzi-meyer-7ARN514bTuA-unsplash 1.jpg" alt=""></div>
+        </div>
+        <div class="mail-wrap__text">
+          <div class="AnimRight">
+            <p style="white-space: pre-wrap;"><%- aboutUs[0].description %></p>
+          </div>
+          <div class="AnimRight">
+            <p class="signature">З повагою, Свiтлана Савка</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-gallery">
+    <div class="animate-on-scroll">
+      <div class="container-gallery__wrapper" id="gallery">
+        <div class="gallery-title">
+          Галерея
+          <div class="gallery-button-wrapper-mobile">
+            <div class="gallery-button-mobile-left"><img src="/assets/image/row-mobile-left.svg" alt="row"></div>
+            <div class="gallery-button-mobile-right"><img src="/assets/image/row-mobile.svg" alt="row"></div>
+          </div>
+        </div>
+        <div class="gallery-navigation">
+          <div class="gallery-button-left"><img src="/assets/image/row-left.svg" alt="row"></div>
+          <div class="gallery-wrapper">
+            <%if (gallery.length> 0) { %> <% gallery.forEach((post)=> { %>
+                <div class="galleryElement1">
+                  <div class="galleryElement1__img"><img src="<%= post.img %>" alt="photo"></div>
+                  <div class="galleryElement1__data">
+                    <%- new Date(post.date).toISOString().split('T')[0] %>
+                  </div>
+                  <div class="galleryElement1__text">
+                    <%=post.description %>
+                  </div>
+                </div>
+                <% }) %>
+                  <% } else {%>
+                    <div class="col-lg-8 offset-lg-2 text-center">
+                      <div class="section-title">
+                        <h3 style="color: #413a3a"><span class="orange-text">Opps</span>...</h3>
+                        <b style="color: #413a3a"> At this moment, there are not any posts </b>
+                      </div>
+                    </div>
+                    <%}%>
+          </div>
+          <div class="gallery-button-right"><img src="/assets/image/row-right.svg" alt="row"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-map" id="directions">
+    <div class="container-map__wrapper">
+      <div class="AnimLeft">
+        <div class="container-map-title-wrap">
+          <div class="container-map-title-wrap__title">як добратись</div>
+          <div class="container-map-title-wrap__subtitle">Запрошуємо вас в подорож за смаком на наші надзвичайні
+            Пекарські
+            майстер-класи, які розцвітають у неповторній локації — у затишному селищі Дешичі, на обрії Самбірського
+            району. <br><br>
+            Це магічне місце, де вишукана природа обіймає наші майстерні, створюючи неповторну атмосферу для вивчення
+            таємниць висококласного хлібопекарства. Приходьте відчути аромат свіжопеченого хліба, переплетений з
+            гармонією
+            навколишнього середовища</div>
+        </div>
+      </div>
+      <!-- add shorter maps -->
+      <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d31767.172269494662!2d22.935554460735943!3d49.654557352960545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sua!4v1700418356069!5m2!1sen!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+      <!-- <div class="container-map__google-map"><iframe width="600" height="450" style="border:0" loading="lazy"
+            allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed/v1/place?key=API_KEY
+        &q=Space+Needle,Seattle+WA">
+          </iframe></div> -->
+      <div class="AnimRight">
+        <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
+          <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div>
+          <script>(function () {
+              var setting = { "query": "Дешичі, Lviv Oblast, Ukraine", "satellite": false, "zoom": 12, "placeId": "ChIJ_xYL1DucO0cRYs3xLkdg0xg", "cid": "0x18d360472ef1cd62", "coords": [49.6541314, 22.9364654], "lang": "en", "queryString": "Дешичі, Lviv Oblast, Ukraine", "centerCoord": [49.6541314, 22.9364654], "id": "map-9cd199b9cc5410cd3b1ad21cab2e54d3", "embed_id": "1031040" };
+              var d = document;
+              var s = d.createElement('script');
+              s.src = 'https://1map.com/js/script-for-user.js?embed_id=1031040';
+              s.async = true;
+              s.onload = function (e) {
+                window.OneMap.initMap(setting)
+              };
+              var to = d.getElementsByTagName('script')[0];
+              to.parentNode.insertBefore(s, to);
+            })();</script><a href="https://1map.com/map-embed">1 Map</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-routes">
+    <div class="animate-on-scroll">
+      <div class="container-routes__title">
+        <h2>як добратись</h2>
+      </div>
+      <div class="container-routes-versions" id="scrollContainer">
+        <div class="version1-wrap">
+          <div class="version1-wrap__img"><img src="/assets/image/routes-version1-img.jpg" alt="image"></div>
+          <div class="version1-wrap__title">Самбір - Передільниця
+          </div>
+          <div class="version1-wrap__subtitle">Маршрутне таксі</div>
+          <div class="version1-wrap__button">
+            <a href="http://bus.com.ua/cgi-bin/tablo.pl?as=461200">
+              перевірити розклад
+              <img src="/assets/image/arrow-right.svg" alt="arrow">
+            </a>
+          </div>
+        </div>
+        <div class="version2-wrap">
+          <div class="version2-wrap__img"><img src="/assets/image/routes-version2-img.jpg" alt="image"></div>
+          <div class="version2-wrap__title">Самбір - Дроздовичі
+          </div>
+          <div class="version2-wrap__subtitle">Маршрутне таксі</div>
+          <div class="version2-wrap__button">
+            <a href="http://bus.com.ua/cgi-bin/tablo.pl?as=461200">
+              перевірити розклад
+              <img src="/assets/image/arrow-right.svg" alt="arrow">
+            </a>
+          </div>
+        </div>
+        <div class="version3-wrap">
+          <div class="version3-wrap__img"><img src="/assets/image/routes-version3-img.jpg" alt="image"></div>
+          <div class="version3-wrap__title">Львів - Передільниця
+          </div>
+          <div class="version3-wrap__subtitle">Маршрут з ночівлею в Дешичах</div>
+          <div class="version3-wrap__button">
+            <a href="http://bus.com.ua/cgi-bin/tablo.pl?as=469000">
+              перевірити розклад
+              <img src="/assets/image/arrow-right.svg" alt="arrow">
+            </a>
+          </div>
+        </div>
+        <div class="version4-wrap">
+          <div class="version4-wrap__img"><img src="/assets/image/routes-version4-img.jpg" alt="image"></div>
+          <div class="version4-wrap__title">Автошлях H13
+          </div>
+          <div class="version4-wrap__subtitle">Автомобілем</div>
+          <div class="version4-wrap__button">
+            <a
+              href="https://www.google.com/maps/dir/%D0%9B%D1%8C%D0%B2%D1%96%D0%B2,+%D0%9B%D1%8C%D0%B2%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C/%D0%94%D0%B5%D1%88%D0%B8%D1%87%D1%96,+%D0%9B%D1%8C%D0%B2%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C/@49.6754903,23.2602589,10.5z/data=!4m13!4m12!1m5!1m1!1s0x473add7c09109a57:0x4223c517012378e2!2m2!1d24.029717!2d49.839683!1m5!1m1!1s0x473b9c3bd40b16ff:0x18d360472ef1cd62!2m2!1d22.9364655!2d49.6541314?entry=ttu">
+              прокласти маршрут
+              <img src="/assets/image/arrow-right.svg" alt="arrow">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="animate-on-scroll">
+      <div class="container-footer">
+        <div class="mobile-footer">
+          <div class="logo-footer">
+            <img src="/assets/image/logo-footer.svg" alt="logo">
+          </div>
+          <nav class="navigation-footer-wrap">
+            <a href="#main" class="navigation-footer-wrap__element">Головна</a>
+            <a href="#master-classes" class="navigation-footer-wrap__element">Майстер-класи</a>
+            <!-- <a href="#" class="navigation-footer-wrap__element">Про нас</a> -->
+            <a href="#gallery" class="navigation-footer-wrap__element">Галерея</a>
+            <a href="#directions" class="navigation-footer-wrap__element">Як добратись</a>
+          </nav>
+        </div>
+        <div class="contacts" id="contact_us">
+          <a href="tel: +380 96 476 9494"><img src="/assets/image/tel.svg" alt="tel">
+            <%= contact.phone %>
+          </a>
+          <a href="mailto:<%= contact.email %>"><img src="/assets/image/mail.svg" alt="mail">
+            <%= contact.email %>
+          </a>
+          <!-- <a href="https://maps.app.goo.gl/FTXrSkEGdyqYfZGw7" target="_blank"><img src="/assets/image/pointer.svg"
+                alt="pointer">Дешичі, Львівська область</a> -->
+          <!-- або так можна або просто лишити точку не на дешичі а саме на її пекарню як знизу -->
+          <a href="https://maps.app.goo.gl/Vi2NeF8naY3t8DN49" target="_blank"><img src="/assets/image/pointer.svg"
+              alt="pointer">Локація пекарні, с.Дешичі, Львівська область</a>
+          <a href=""><img src="/assets/image/facebook.svg" alt="">Пекарські майстер-класи Світлани Савки</a>
+        </div>
+      </div>
+    </div>
+    <div class="white-line"></div>
+    <div class="footer-bottom">
+      <div class="footer-bottom__rights">Усі права захищено</div>
+      <div class="footer-bottom__sova">developed by <img src="/assets/image/sovaLogo.svg" alt=""></div>
+      <!-- <div class="footer-bottom__designer">Дизайнер: Олександра Астапова</div> -->
+    </div>
+  </footer>
+  <script src="/assets/js/main.js"></script>
+</body>
+
+</html>
