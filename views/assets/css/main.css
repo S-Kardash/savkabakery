@@ -578,6 +578,7 @@ video {
 .galleryElement1__img {
     width: 340px;
     height: 340px;
+    cursor: pointer;
 }
 
 .galleryElement1__img img {
@@ -2242,7 +2243,11 @@ video {
 /* -------FOOTER--------- */
 @media screen and (max-width: 1441px) {
     .white-line {
-        margin-top: 50px;
+        margin-top: 20px;
+    }
+
+    .logo-footer {
+        margin-left: 90px;
     }
 }
 
