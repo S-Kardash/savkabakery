@@ -219,3 +219,47 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    const galleryElements = document.querySelectorAll(".galleryElement1__img img");
+    const popup = document.getElementById("popup");
+    const popupImage = document.getElementById("popupImage");
+
+    galleryElements.forEach(function (element) {
+        element.addEventListener("click", function () {
+            const imageURL = element.getAttribute("src");
+            popupImage.setAttribute("src", imageURL);
+            popup.classList.add("open");
+        });
+    });
+
+    popup.addEventListener("click", function () {
+        popup.classList.remove("open");
+    });
+});
+
+
+// document.addEventListener("DOMContentLoaded", function () {
+//     const galleryElements = document.querySelectorAll(".galleryElement1");
+//     const popup = document.getElementById("popup");
+//     const popupContent = document.querySelector(".popup-content");
+
+//     galleryElements.forEach(function (element) {
+//         element.addEventListener("click", function () {
+//             // Clone the clicked gallery element and its content
+//             const clonedElement = element.cloneNode(true);
+//             // Remove any previous content in the popup
+//             popupContent.innerHTML = "";
+//             // Append the cloned element to the popup
+//             popupContent.appendChild(clonedElement);
+//             // Show the popup
+//             popup.classList.add("open");
+//         });
+//     });
+
+//     popup.addEventListener("click", function () {
+//         // Close the popup when clicked outside of the content
+//         if (event.target === popup) {
+//             popup.classList.remove("open");
+//         }
+//     });
+// });

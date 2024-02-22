@@ -386,7 +386,10 @@ video {
 }
 
 .container-callToAction {
-    background: url(https://res.cloudinary.com/ddprhyp1z/image/upload/v1701791467/cflmkr2gjfgwr01zbldl.jpg) no-repeat;
+    position: relative;
+    /* Додаємо позицію relative для коректної роботи з псевдоелементом */
+    background-image: url(https://res.cloudinary.com/ddprhyp1z/image/upload/v1701791467/cflmkr2gjfgwr01zbldl.jpg);
+    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     height: clamp(700px, 145vh, 1000px);
@@ -395,8 +398,24 @@ video {
     align-items: center;
 }
 
+.container-callToAction::before {
+    content: "";
+    /* Додаємо пустий контент */
+    position: absolute;
+    /* Розташовуємо псевдоелемент абсолютно */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.45);
+    /* Колір фону з прозорістю */
+    z-index: 1;
+    /* Задаємо z-index, щоб псевдоелемент був під зображенням */
+}
+
 .title-wrap {
     margin-left: 90px;
+    z-index: 2;
 }
 
 .title-wrap h1 {
@@ -498,7 +517,7 @@ video {
 }
 
 .container-gallery {
-    background-color: #958D83;
+    background-color: #A89E93;
 }
 
 .container-gallery__wrapper {
@@ -628,6 +647,60 @@ video {
     transform: scale(1.2);
 }
 
+@keyframes popupAnimation {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: popupAnimation 0.3s ease;
+}
+
+.popup-content {
+    position: relative;
+    display: contents;
+}
+
+.popup-content img {
+    max-width: 70%;
+    max-height: 70%;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.popup-overlay.open {
+    display: flex;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.popup-overlay.open::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
 
 .container-map {
     background-color: #4B372F;
@@ -1481,6 +1554,14 @@ video {
         width: 320px;
     }
 
+    .gallery-wrapper {
+        overflow: scroll;
+    }
+
+    .gallery-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+
     .container-map__wrapper {
         gap: 30px;
     }
@@ -1576,6 +1657,10 @@ video {
         margin-left: 190px;
         width: 180px;
         font-size: 14px;
+    }
+
+    .container-gallery {
+        padding-top: calc(100% - 90%);
     }
 
     .container-callToAction {
@@ -2155,6 +2240,12 @@ video {
 
 
 /* -------FOOTER--------- */
+@media screen and (max-width: 1441px) {
+    .white-line {
+        margin-top: 50px;
+    }
+}
+
 @media screen and (max-width: 1360px) {
     .logo-footer {
         margin-left: 60px;
