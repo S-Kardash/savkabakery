@@ -25,9 +25,6 @@ app.use(
     secret: `${process.env.USERNAME}`,
     resave: false,
     saveUninitialized: true,
-    cookie: {
-      expires: new Date(Date.now() + 3600000), // 1 година в мілісекундах що редагує сайт потім треба перезайти(для безпеки)
-    },
   })
 );
 
